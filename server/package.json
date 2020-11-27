@@ -4,7 +4,8 @@
   "description": "crud test app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "server.js"
   },
   "author": "mykytazviahin@yahoo.com",
   "license": "ISC",
@@ -13,5 +14,12 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.6",
     "pg": "^8.5.1"
+  },
+
+  "engines": {
+    "node": "12.19.0",
+    "npm": "6.14.8"
   }
+
+  
 }
