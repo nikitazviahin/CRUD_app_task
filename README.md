@@ -1,7 +1,7 @@
 # CRUD_app_task
   Test task for WAF
   
-  server is made in Node.js with express
+  server is made with Node.js with express
   
   client is made with React.js
   
