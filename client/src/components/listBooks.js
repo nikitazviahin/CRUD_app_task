@@ -1,8 +1,28 @@
 import React, {Fragment, useEffect, useState} from "react";
+import EditBook from './editBook';
 
 const ListBooks = () => {
 
     const [books, setBooks] = useState([]);
+
+    //delete a Book
+ 
+    const deleteBook = async id => {
+        try {
+            const deleteBook = await fetch(`http://localhost:5000/books/${id}`, {
+                method: "DELETE"
+            }); 
+            setBooks(books.filter(book => book.book_id !== id));
+            console.log(deleteBook);
+            window.location = "/";
+        } catch (error) {
+            console.error(error.message);
+        }
+
+    }
+
+
+    //get all books
 
     const getBooks = async () => {
         try {
@@ -22,21 +42,25 @@ const ListBooks = () => {
     
     return (
     <Fragment>
-        <table class="table table-bordered mt-5 text-center">
-        <tr>
+        <table className="table table-bordered mt-5 text-center">
+        <thead>
+            <tr>
             <th>Book Title</th>
-            <th width>Description</th>
+            <th>Description</th>
             <th>Book Image</th>
         </tr>
+        </thead>
+        <tbody>
         {books.map(book => (
-            <tr>
+            <tr key={book.book_id}>
                 <td>{book.book_title}</td>
                 <td>{book.description}</td>
-                <td><img width='100' height='200' src={book.imageurl}  alt="das"></img></td>
-                <td>Edit</td>
-                <td>Delete</td>
+                <td><img width='120' height='200' src={book.imageurl}  alt="book"></img></td>
+                <td><EditBook book={book}></EditBook></td>
+                <td><button className="btn btn-danger" onClick={() => deleteBook(book.book_id)}>Delete</button></td>
             </tr>
         ))}
+        </tbody>
         </table>
     </Fragment>
     );
