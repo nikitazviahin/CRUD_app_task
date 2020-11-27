@@ -3,7 +3,7 @@
   
   server is made with Node.js with express
   
-  client is made with React.js
+  client is made with React.js, bootstrap for styles
   
   DB is postgresql.
   
