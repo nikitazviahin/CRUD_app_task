@@ -55,7 +55,7 @@ const ListBooks = () => {
             <tr key={book.book_id}>
                 <td>{book.book_title}</td>
                 <td>{book.description}</td>
-                <td><img width='120' height='200' src={book.imageurl}  alt="book"></img></td>
+                <td><img width='100%' height='auto' src={book.imageurl}  alt="book"></img></td>
                 <td><EditBook book={book}></EditBook></td>
                 <td><button className="btn btn-danger" onClick={() => deleteBook(book.book_id)}>Delete</button></td>
             </tr>

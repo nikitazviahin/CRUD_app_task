@@ -26,23 +26,26 @@ const InputBook = () => {
 
     return (
         <Fragment>
-        <h1 className="text-center mt-5">Books List</h1>
+        <h1 className="text-center mt-5">CRUD test task</h1>
         <form className="mt-10" onSubmit={onSubmitForm}>
+            <p>Input book title</p>
             <input 
                 type="text" 
-                className="form-control mt-2" 
+                className="form-control mb-2" 
                 value={book_title} 
                 onChange={e => setBook_title(e.target.value)}
             />
+            <p>Input short book description</p>
             <input 
                 type="text" 
-                className="form-control mt-2" 
+                className="form-control mb-2" 
                 value={description}
                 onChange={e => setDescription(e.target.value)}
             />
+            <p>Input book picture url</p>
             <input 
                 type="text" 
-                className="form-control mt-2" 
+                className="form-control mb-2" 
                 value={imageurl}
                 onChange={e => setImageurl(e.target.value)}
             />

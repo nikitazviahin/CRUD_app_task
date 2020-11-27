@@ -49,21 +49,25 @@ const EditBook = ({ book }) => {
 
                     
                     <div className="modal-body">
+
+                    <p>Edit title</p>
                     <input 
                         type="text" 
-                        className="form-control mt-2" 
+                        className="form-control mb-2" 
                         value={book_title}
                         onChange={e => setBook_title(e.target.value)}
                     />
+                    <p>Edit description</p>
                     <input 
                         type="text" 
-                        className="form-control mt-2" 
+                        className="form-control mb-2" 
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
+                    <p>Edit image url</p>
                     <input 
                         type="text" 
-                        className="form-control mt-2" 
+                        className="form-control mb-2" 
                         value={imageurl}
                         onChange={e => setImageurl(e.target.value)}
                     />
