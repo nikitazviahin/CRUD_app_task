@@ -9,7 +9,7 @@
   
   The application allows you to create, edit, and delete books from the database.
   
-  To run the app: clone this repository. 
+  To run the app locally: firstly, clone this repository. 
 1. Go to CRUD_app_task/server
 2. npm start
 3. node server.js
@@ -19,4 +19,6 @@
 2. npm i
 3. npm start
   
-  Default PORT is 5000
+  Default PORT is 5000.
+  
+  DB schema is in server/database/sql.
