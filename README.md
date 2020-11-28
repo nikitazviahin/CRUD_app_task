@@ -1,6 +1,8 @@
 # CRUD_app_task
   Test task for WAF
   
+  The app is deployed to: https://vast-inlet-90222.herokuapp.com/
+  
   server is made with Node.js, express
   
   client is made with React.js, bootstrap for styles
@@ -22,3 +24,4 @@
   Default PORT is 5000.
   
   DB schema is in server/database/sql.
+  
