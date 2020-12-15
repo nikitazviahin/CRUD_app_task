@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.listen(PORT, () => {
-    console.log(`server had started on port ${PORT}`);
+    console.log(`Server had started on port ${PORT}`);
 })
 
 //add book
